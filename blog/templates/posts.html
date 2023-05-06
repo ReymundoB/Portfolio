@@ -1,0 +1,10 @@
+<h1>Post</h1>
+
+{% for post in posts %}
+    <h1>{{post.title}}</h1>
+    <p>{{post.date}}</p>
+    <p>{{post.description}}</p>
+    <a href="{% url 'post_detail' post.id %}">{{post.title}}</a>
+    <img src="{{post.image.url}}" alt="Cargando...">
+{% endfor %}
+
